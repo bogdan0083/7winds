@@ -79,18 +79,11 @@ gulp.task('html', ['styles'], () => {
 
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
-    .pipe($.if($.if.isFile, $.cache($.imagemin({
-      progressive: true,
-      interlaced: true,
-      // don't remove IDs from SVGs, they are often used
-      // as hooks for embedding and styling
-      svgoPlugins: [{cleanupIDs: false}],
-      use: [pngquant()]
-    }))
-    .on('error', function (err) {
-      console.log(err);
-      this.end();
-    })))
+    .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
     .pipe(gulp.dest('dist/images'));
 });
 
@@ -182,7 +175,7 @@ gulp.task('wiredep', () => {
 
 
 gulp.task('sprites', () => {
-  var spriteData = gulp.src('app/images/*.png').pipe(spritesmith({
+  var spriteData = gulp.src('app/images/icons/*.png').pipe(spritesmith({
    imgName: 'sprites.png',
    cssName: 'sprites.styl',
    imgPath:'../images/sprites/sprites.png'
@@ -216,12 +209,7 @@ gulp.task('icons', function () {
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'sprites', 'icons'], () => {
-  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}))
-  .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }));
+  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
 gulp.task('default', ['clean'], () => {

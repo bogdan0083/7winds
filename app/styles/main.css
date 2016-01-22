@@ -687,7 +687,7 @@ a {
 }
 .header__logo {
 	background-image: url("../images/sprites/sprites.png");
-	background-position: -1153px -284px;
+	background-position: 0 -622px;
 	width: 201px;
 	height: 84px;
 	display: block;
@@ -747,7 +747,7 @@ a {
 }
 .header__discount {
 	background-image: url("../images/sprites/sprites.png");
-	background-position: -672px -284px;
+	background-position: -240px -284px;
 	width: 184px;
 	height: 185px;
 	position: absolute;
@@ -779,7 +779,7 @@ a {
 }
 .header__mouse {
 	background-image: url("../images/sprites/sprites.png");
-	background-position: -1354px -284px;
+	background-position: -763px -122px;
 	width: 40px;
 	height: 67px;
 	display: block;
@@ -795,7 +795,7 @@ a {
 	content: "";
 	position: absolute;
 	background-image: url("../images/sprites/sprites.png");
-	background-position: -1354px -351px;
+	background-position: -803px -122px;
 	width: 18px;
 	height: 11px;
 	bottom: -20px;
@@ -913,7 +913,7 @@ a {
 	content: "";
 	position: absolute;
 	background-image: url("../images/sprites/sprites.png");
-	background-position: -856px -284px;
+	background-position: -424px -284px;
 	width: 297px;
 	height: 89px;
 	bottom: -90px;
@@ -923,7 +923,7 @@ a {
 	content: "";
 	position: absolute;
 	background-image: url("../images/sprites/sprites.png");
-	background-position: -856px -373px;
+	background-position: -424px -373px;
 	width: 285px;
 	height: 89px;
 	bottom: -3px;
@@ -933,7 +933,7 @@ a {
 	content: "";
 	position: absolute;
 	background-image: url("../images/sprites/sprites.png");
-	background-position: -1003px -572px;
+	background-position: -285px -533px;
 	width: 285px;
 	height: 89px;
 	bottom: -90px;
@@ -943,7 +943,7 @@ a {
 	content: "";
 	position: absolute;
 	background-image: url("../images/sprites/sprites.png");
-	background-position: -1003px -483px;
+	background-position: 0 -533px;
 	width: 285px;
 	height: 89px;
 	bottom: -3px;
@@ -1082,7 +1082,7 @@ a {
 	content: "";
 	position: absolute;
 	background-image: url("../images/sprites/sprites.png");
-	background-position: -763px -483px;
+	background-position: 0 -284px;
 	width: 240px;
 	height: 249px;
 	left: 100px;
@@ -1093,7 +1093,7 @@ a {
 	content: "";
 	position: absolute;
 	background-image: url("../images/sprites/sprites.png");
-	background-position: 0 -483px;
+	background-position: 0 0;
 	width: 382px;
 	height: 284px;
 	left: -350px;
@@ -1136,7 +1136,7 @@ a {
 	content: "";
 	position: absolute;
 	background-image: url("../images/sprites/sprites.png");
-	background-position: -382px -483px;
+	background-position: -382px 0;
 	width: 381px;
 	height: 267px;
 	right: -376px;
