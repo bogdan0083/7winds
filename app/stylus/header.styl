@@ -1,0 +1,139 @@
+// header
+
+.header {
+	background url(../images/header-bg.jpg) no-repeat center / cover
+	min-height 868px
+	position relative
+	&__in {
+	}
+	&__topline {
+		min-height 53px
+		background-color rgba(white, 30%)
+	}
+	&__nav {
+		margin 0 auto
+		width 960px
+	}
+	&__nav-list {
+		text-align center
+	}
+	&__nav-item {
+		display inline-block
+		margin 0 12.5px
+		a {
+			display block
+			font-size 14px
+			color #242424
+			height 53px
+			line-height 53px
+			lato600i()
+			
+			&:hover {
+				text-decoration underline
+			}
+		}
+	}
+	&__top {
+		width 1110px
+		margin 0 auto
+		text-align center
+		clearfix()
+	}
+	&__logo {
+		sprite($logo_horizontal)
+		display block
+		margin-top 4px
+		margin-left 40px
+		float left
+		hide-text()
+	}
+	&__calculate {
+		text-align center
+		margin-top 15px
+	}
+	&__contact {
+		float right
+		color white
+		margin-top 8px
+	}
+	&__phone {
+		display block
+		font-size 30px
+		rb700()
+		span {
+			font-size 19px
+			margin-right 4px
+		}
+	}
+	&__phone-caption {
+		lato600i()
+		font-size 14px
+		margin-top 4px
+		display block
+		padding-bottom 2px
+		border-bottom 1px dashed white
+	}
+	&__promo {
+		width 1200px
+		margin 0 auto
+		position relative
+	}
+	&__mega-heading {
+		background url(../images/header-heading.png) no-repeat center / cover
+		width 661px
+		height 472px
+		margin 28px auto
+		
+		hide-text()
+	}
+	&__discount {
+		sprite($30)
+		position absolute
+		top 345px
+		right 102px
+		transform scale(0)
+		&_animated {
+			animation scaleUp 1s ease forwards
+			animation-delay 0.5s
+		}
+	}
+	&__form-wrap {
+		width 1155px
+		margin-top 40px
+		float right
+		background-color rgba(255, 255, 255, 0.2)
+		background-image linear-gradient(to top, rgba(0, 0, 0, 0.01) 0%, rgba(255, 255, 255, 0.01) 100%)
+		border-radius 5px
+		box-shadow -0.7px 0.7px 2.9px 0.1px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(255, 255, 255, 0.7)
+		min-height 103px
+		opacity 0
+		&_animated {
+			animation fadeInUp 1s ease forwards
+		}
+	}
+	
+	&__form {
+		margin-left 55px
+		padding-top 14px
+	}
+	&__mouse {
+		sprite($mouse)
+		display block
+		position absolute
+		bottom 62px
+		left 50%
+		transition opacity 0.3s ease
+		&_hidden {
+			opacity 0
+		}
+		&:after {
+			content ''
+			position absolute
+			sprite($arrow)
+			bottom -20px
+			left 50%
+			margin-left -(@width / 2)
+			animation moveDown 1.5s ease infinite
+		}
+	}
+}

@@ -1,0 +1,137 @@
+
+// clearfix 
+
+// clearfix()
+//   &:before
+//   &:after
+//     content ""
+//     display table
+//   &:after
+//     clear both
+
+
+// FONT MIXINS
+
+
+lato500i()
+  font-family 'Lato Medium Italic', sans-serif
+  font-weight 500
+  font-style italic
+
+lato600i()
+  font-family 'Lato Semi Bold Italic', sans-serif
+  font-weight 600
+  font-style italic
+  
+lobster()
+  font-family 'Lobster', cursive
+  font-weight 400
+
+rb300()
+  font-family 'Roboto', sans-serif
+  font-weight 300
+
+rb400()
+  font-family 'Roboto', sans-serif
+  font-weight 400
+
+rb400i()
+  font-family 'Roboto', sans-serif
+  font-weight 400
+  font-style italic
+  
+rb500()
+  font-family 'Roboto', sans-serif
+  font-weight 500
+
+rb700()
+  font-family 'Roboto', sans-serif
+  font-weight 700
+  
+// rbi300()
+//   font-family 'Roboto', sans-serif
+//   font-weight 300
+//   font-style italic
+
+// rbi500()
+//   font-family 'Roboto', sans-serif
+//   font-weight 500
+//   font-style italic
+  
+rbc400()
+  font-family 'Roboto Condensed', sans-serif
+  font-weight 400
+  
+rbc700()
+  font-family 'Roboto Condensed', sans-serif
+  font-weight 700
+
+
+
+// TRIANGLE
+
+triangle(width = 10px, height = 10px, direction = 'bottom', color = #000)
+
+  // Base triangle styles
+  width 0
+  height 0
+  background 0
+  border-style solid
+
+  // Styles for each direction
+  directions = {
+    top: {
+      border-width: 0 (width * .5) height (width * .5),
+      border-color: transparent transparent color transparent
+    },
+    topRight: {
+      border-width: 0 width height 0,
+      border-color: transparent color transparent transparent
+    },
+    right: {
+      border-width: (height * .5) 0 (height *.5) width,
+      border-color: transparent transparent transparent color
+    },
+    bottomRight: {
+      border-width: 0 0 height width,
+      border-color: transparent transparent color transparent
+    },
+    bottom: {
+      border-width: height (width * .5) 0 (width * .5),
+      border-color: color transparent transparent transparent
+    },
+    bottomLeft: {
+      border-width: width 0 0 height,
+      border-color: transparent transparent transparent color
+    },
+    left: {
+      border-width: (height * .5) width (height * .5) 0,
+      border-color: transparent color transparent transparent
+    },
+    topLeft: {
+      border-width: height width 0 0,
+      border-color: color transparent transparent transparent
+    }
+  }
+
+  // Mixin styles for passed direction
+  styles = directions[direction]
+  {styles}
+  
+// FONT FACE
+// =========
+//
+
+font-url(file)
+  return url(file)
+
+webfont(family, file, weight = normal, style = normal)
+  @font-face
+    font-family family
+    src font-url(file + '.eot')
+    src font-url(file + '.eot?#iefix') format('embedded-opentype'),
+    font-url(file + '.woff') format('woff'),
+    font-url(file + '.ttf') format('truetype'),
+    font-url(file + '.svg#'+ family) format('svg')
+    font-weight weight
+    font-style style

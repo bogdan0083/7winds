@@ -1,0 +1,168 @@
+html
+  box-sizing border-box
+
+*, *:before, *:after 
+  box-sizing inherit
+
+body
+  color #242424
+  font-size 20px
+  background white
+  rb300()
+  
+.main
+  min-width 1200px
+  margin 0 auto
+  clearfix()
+
+a
+  color black
+  text-decoration none
+  
+// FONTS
+    
+webfont('Lato Medium Italic', '../fonts/lato-mediumitalic-webfont', 500, italic)
+webfont('Lato Semi Bold Italic', '../fonts/lato-semibolditalic-webfont', 600, italic)
+
+
+// button
+
+.button {
+  display inline-block
+  text-transform uppercase
+  line-height 53px
+  height 53px
+  padding-left 35px
+  padding-right 35px
+  color white
+  font-size 15px
+  border none
+  border-radius 6px
+  box-shadow 0 2px 6px rgba(0, 0, 0, 0.22), inset 0 -2px 0 rgba(0, 0, 0, 0.2)
+  transition all 0.4s ease
+  rb700()
+  
+  &:active {
+    box-shadow inset 0 2px 0 rgba(0, 0, 0, 0.2)
+  }
+  
+  &_orange {
+    background-color #ffad00
+    &:hover {
+      background-color #f5b75f
+    }
+    
+    &:active {
+      background-color #d69840
+    }
+  }
+  
+  &_red {
+    background-color #e41915
+    
+    &:hover {
+      background-color #d73e3b
+    }
+    
+    &:active {
+      background-color #c81612
+    }
+    
+  }
+}
+
+// FORM
+
+.form {
+  
+  &__label {
+    color #242424
+    vertical-align top
+    rbc700()
+    font-size 16px
+    display inline-block
+    &:nth-child(1) {
+      width 180px
+      margin-right 2px
+    }
+    &:nth-child(2) {
+      width 178px
+      margin-right 18px
+    }
+    &:nth-child(3) {
+      width 172px
+    }
+    &:nth-child(4) {
+      width 55px
+      margin-right 20px
+      .form__field {
+        text-align center
+      }
+    }
+    &:nth-child(5) {
+      width 90px
+      .form__field {
+        text-align center
+      }
+    }
+    &:nth-child(6) {
+      width 55px
+      .form__field {
+        text-align center
+      }
+    }
+  }
+  &__field {
+    margin-top 3px
+    padding-left 10px
+    padding-right 10px
+    border-radius 6px
+    width 48px
+    width 100%
+    border 0
+    box-shadow inset 0 0 3px 1px rgba(#e7e7e7, 100%)
+    height 48px
+    display block
+    rb500()
+  }
+  &__submit {
+    margin-left 25px
+    vertical-align bottom
+  }
+  &__textarea {
+  }
+}
+
+// KEYFRAMES FOR DISCOUNT BLOCK
+
+@keyframes scaleUp
+  0%
+    transform scale(0)
+  70%
+    transform scale(1.1)
+  100%
+    transform scale(1)
+    
+// KEYFRAMES FOR ARROW DOWN
+
+@keyframes moveDown
+  0%
+    transform translateY(0px)
+  
+  50% 
+    transform translateY(10px)
+  100%
+    transform translateY(0px)
+
+
+@keyframes hide
+  0%
+    opacity 1
+  100%
+    opacity 0
+
+@keyframes appear
+  0%
+    opacity 0
+  100%
+    opacity 1
