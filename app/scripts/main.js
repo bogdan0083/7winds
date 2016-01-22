@@ -27,7 +27,7 @@ $(document).ready(function() {
         live: true, // act on asynchronously loaded content (default is true)
         callback: function(box) {
             if ($(box).hasClass('features')) {
-            	console.log('fired');
+                console.log('fired');
                 $('.features__heading').addClass('features__heading_animated');
                 $('.features__image_first').addClass('features__image_first_animated');
                 $('.features__image_second').addClass('features__image_second_animated');
@@ -39,7 +39,7 @@ $(document).ready(function() {
 
             }
             if ($(box).hasClass('process')) {
-            	console.log('fired second');
+                console.log('fired second');
                 $('.process__in').addClass('process__in_animated');
                 $('.process__steps').addClass('process__steps_animated');
 
@@ -52,11 +52,24 @@ $(document).ready(function() {
 
     $('.testimonials__slider').slick({
         dots: false,
-        autoplay:true,
+        autoplay: false,
         infinite: true,
         arrows: false,
         fade: true,
         cssEase: 'ease'
+    });
+
+    // изменять затемнение при клике
+
+    $('.testimonials__controls').on('click', '.testimonials__control', function(e) {
+
+        $('.testimonials__control').removeClass('testimonials__control_active');
+
+        $(e.target).addClass('testimonials__control_active');
+
+        var index = $('.testimonials__control').index($(e.target));
+
+        $('.testimonials__slider').slick('slickGoTo', index);
     });
 
     $('.header__topline').on('click', '.header__nav-item a', function(e) {
@@ -68,4 +81,11 @@ $(document).ready(function() {
             scrollTop: sectionScrollTo.position().top
         }, '600');
     });
- });
+
+    // попап окно
+
+    $('.header__calculate').magnificPopup({
+        type: 'inline',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    });
+});

@@ -42,7 +42,7 @@
                 </div>
                 <div class="header__top">
                     <a href="#" class="header__logo">Семь ветров</a>
-                    <button class="header__calculate button button_orange">Рассчитать стоимость тура</button>
+                    <button data-mfp-src="#popup" class="header__calculate button button_orange">Рассчитать стоимость тура</button>
                     <div class="header__contact">
                         <div class="header__phone"><span>(495)</span>926-19-66</div>
                         <span class="header__phone-caption">Звоните! Подберем тур сегодня!</span>
@@ -187,14 +187,14 @@
                         <button class="testimonials__button button button_red">добавить отзыв с фото</button><a href="#" class="testimonials__show-more">Показать другие три отзыва</a>
                     </div>
                     <ul class="testimonials__controls">
-                        <li class="testimonials__control">
-                            <img src="" alt="Фотография клиентов">
+                        <li class="testimonials__control testimonials__control_active">
+                            <img src="http://placehold.it/400x240" alt="Фотография клиентов">
                         </li>
                         <li class="testimonials__control">
-                            <img src="" alt="Фотография клиентов">
+                            <img src="http://placehold.it/400x240" alt="Фотография клиентов">
                         </li>
                         <li class="testimonials__control">
-                            <img src="" alt="Фотография клиентов">
+                            <img src="http://placehold.it/400x240" alt="Фотография клиентов">
                         </li>
                     </ul>
                 </div>
@@ -257,6 +257,7 @@
                 <p class="footer__copyright">2015 © Туристическая компания “Название” - Горячие туры в Турцию, Египет, Таиланд, ОАЭ, Испанию, Грецию, Марокко, Вьетнам, Чехию, Андорру, Доминикану, Мексику, Болгарию, Россию</p>
             </div>
         </footer>
+        <div id="popup" class="popup mfp-hide"><p>Попап окно</p></div>
     </div>
     <script type="text/javascript">
     ymaps.ready(function () {
@@ -294,6 +295,7 @@
     <script src="scripts/main.js"></script>
     <script src="scripts/slick.min.js"></script>
     <script src="scripts/wow.min.js"></script>
+    <script src="scripts/jquery.magnific-popup.min.js"></script>
     <!-- endbuild -->
 
 </body>
