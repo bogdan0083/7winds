@@ -549,23 +549,52 @@
 }
 .contact {
 	min-height 945px
+	overflow hidden
+	position relative
 	//background url('../images/map.jpg') no-repeat center / cover;
 	&__in {
 	}
 	&__content {
+		position absolute
+		z-index 2
+		width 502px
+		height 580px
+		text-align center
+		background-color rgba(white, 0.8)
+		top 130px
+		left 50%
+		margin-left -(@width / 2)
+		
 	}
-	&__heading-small {
-	}
-}
-.concact {
 	&__logo {
+		position relative
+		bottom 10px
+		margin-bottom 30px
 	}
 	&__button {
+		margin 20px 0 35px
 	}
 	&__heading-small {
+		text-transform uppercase
+		rb500()
+		span {
+			font-size 30px
+			display inline-block
+			margin-top 12px
+		}
 	}
 	&__address {
+		margin 20px 0
 	}
 	&__worktime {
+		margin 20px 0
 	}
+	&__heading-small {
+		&_tt_none {
+			text-transform none
+		}
+	}
+	
+}
+.concact {
 }

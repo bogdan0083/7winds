@@ -803,6 +803,26 @@ a {
 	margin-left: -9px;
 	animation: moveDown 1.5s ease infinite;
 }
+.footer {
+	height: 50px;
+	background-color: #474747;
+}
+.footer__in {
+	width: 1200px;
+	margin: 0 auto;
+	display: table;
+}
+.footer__copyright {
+	color: #fff;
+	font-size: 12px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	display: table-cell;
+	height: 50px;
+	vertical-align: middle;
+	text-align: center;
+	width: 100%;
+}
 .features {
 	padding-top: 30px;
 	visibility: visible !important;
@@ -1390,4 +1410,44 @@ a {
 }
 .contact {
 	min-height: 945px;
+	overflow: hidden;
+	position: relative;
+}
+.contact__content {
+	position: absolute;
+	z-index: 2;
+	width: 502px;
+	height: 580px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.8);
+	top: 130px;
+	left: 50%;
+	margin-left: -251px;
+}
+.contact__logo {
+	position: relative;
+	bottom: 10px;
+	margin-bottom: 30px;
+}
+.contact__button {
+	margin: 20px 0 35px;
+}
+.contact__heading-small {
+	text-transform: uppercase;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+}
+.contact__heading-small span {
+	font-size: 30px;
+	display: inline-block;
+	margin-top: 12px;
+}
+.contact__address {
+	margin: 20px 0;
+}
+.contact__worktime {
+	margin: 20px 0;
+}
+.contact__heading-small_tt_none {
+	text-transform: none;
 }

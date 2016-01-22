@@ -17,7 +17,7 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"> </script>
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
@@ -236,17 +236,17 @@
             </section>
             <section class="contact">
                 <div class="contact__in">
-                    <div id="map" style="width: 600px; height: 400px"></div>
+                    <div id="map" style="width: 100%; height: 100%; position: absolute;"></div>
                     <div class="contact__content">
-                        <img src="" alt="Логотип Семь ветров" class="concact__logo" title="Логотип Семь ветров">
-                        <h5 class="contact__heading-small">Позвоните <span>(495) 926-19-66</span></h5>
-                        <button class="concact__button button button_red">заказать обратный звонок</button>
-                        <h5 class="concact__heading-small">Приезжайте:</h5>
-                        <p class="concact__address">Точка продаж ANEX Tour
+                        <img src="images/logo-vertical.png" alt="Логотип Семь ветров" class="contact__logo" title="Логотип Семь ветров">
+                        <h5 class="contact__heading-small">Позвоните <br><span>(495) 926-19-66</span></h5>
+                        <button class="contact__button button button_red">заказать обратный звонок</button>
+                        <h5 class="contact__heading-small">Приезжайте:</h5>
+                        <p class="contact__address">Точка продаж ANEX Tour
                             <br>г. Москва, ул. Тверская д.18 корп.1,
                             <br> 5 этаж офис 502</p>
-                        <h5 class="concact__heading-small">График работы:</h5>
-                        <p class="concact__worktime">Понедельник – пятница с 09.00 до 21.00
+                        <h5 class="contact__heading-small contact__heading-small_tt_none">График работы:</h5>
+                        <p class="contact__worktime">Понедельник – пятница с 09.00 до 21.00
                             <br>Суббота - Воскресенье с 10.00 до 19.00</p>
                     </div>
                 </div>
@@ -258,6 +258,33 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript">
+    ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [55.82130053, 37.50882614],
+            zoom: 17
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'images/myIcon.gif',
+            // Размеры метки.
+            iconImageSize: [30, 42],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-3, -42]
+        });
+
+    myMap.geoObjects.add(myPlacemark);
+});
+    </script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -268,12 +295,7 @@
     <script src="scripts/slick.min.js"></script>
     <script src="scripts/wow.min.js"></script>
     <!-- endbuild -->
-    <script type="text/javascript">
-    var map = new ymaps.Map("map", {
-        center: [55.76, 37.64],
-        zoom: 7
-    });
-    </script>
+
 </body>
 
 </html>
