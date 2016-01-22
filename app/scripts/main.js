@@ -59,8 +59,13 @@ $(document).ready(function() {
         cssEase: 'ease'
     });
 
-    // var map = new ymaps.Map("map", {
-    //         center: [55.76, 37.64], 
-    //         zoom: 7
-    //     });
-});
+    $('.header__topline').on('click', '.header__nav-item a', function(e) {
+        e.preventDefault();
+        var id = $(e.target).attr('href');
+        var sectionScrollTo = $(id);
+
+        $('body', 'html').animate({
+            scrollTop: sectionScrollTo.position().top
+        }, '600');
+    });
+ });
