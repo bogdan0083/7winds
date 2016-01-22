@@ -779,7 +779,7 @@ a {
 }
 .header__mouse {
 	background-image: url("../images/sprites/sprites.png");
-	background-position: -763px -122px;
+	background-position: -721px -284px;
 	width: 40px;
 	height: 67px;
 	display: block;
@@ -795,7 +795,7 @@ a {
 	content: "";
 	position: absolute;
 	background-image: url("../images/sprites/sprites.png");
-	background-position: -803px -122px;
+	background-position: -382px -267px;
 	width: 18px;
 	height: 11px;
 	bottom: -20px;
@@ -933,7 +933,7 @@ a {
 	content: "";
 	position: absolute;
 	background-image: url("../images/sprites/sprites.png");
-	background-position: -285px -533px;
+	background-position: 0 -533px;
 	width: 285px;
 	height: 89px;
 	bottom: -90px;
@@ -943,7 +943,7 @@ a {
 	content: "";
 	position: absolute;
 	background-image: url("../images/sprites/sprites.png");
-	background-position: 0 -533px;
+	background-position: -285px -533px;
 	width: 285px;
 	height: 89px;
 	bottom: -3px;
