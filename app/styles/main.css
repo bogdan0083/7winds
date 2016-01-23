@@ -1,41 +1,49 @@
 @-moz-keyframes fadeInUp {
 	0% {
 		opacity: 0;
-		transform: translateY(100px);
+		-webkit-transform: translateY(100px);
+		        transform: translateY(100px);
 	}
 	100% {
 		opacity: 1;
-		transform: translateY(0);
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
 	}
 }
 @-webkit-keyframes fadeInUp {
 	0% {
 		opacity: 0;
-		transform: translateY(100px);
+		-webkit-transform: translateY(100px);
+		        transform: translateY(100px);
 	}
 	100% {
 		opacity: 1;
-		transform: translateY(0);
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
 	}
 }
 @-o-keyframes fadeInUp {
 	0% {
 		opacity: 0;
-		transform: translateY(100px);
+		-webkit-transform: translateY(100px);
+		        transform: translateY(100px);
 	}
 	100% {
 		opacity: 1;
-		transform: translateY(0);
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
 	}
 }
 @keyframes fadeInUp {
 	0% {
 		opacity: 0;
-		transform: translateY(100px);
+		-webkit-transform: translateY(100px);
+		        transform: translateY(100px);
 	}
 	100% {
 		opacity: 1;
-		transform: translateY(0);
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
 	}
 }
 * {
@@ -1741,90 +1749,114 @@ a {
 }
 @-moz-keyframes scaleUp {
 	0% {
-		transform: scale(0);
+		-webkit-transform: scale(0);
+		        transform: scale(0);
 	}
 	70% {
-		transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		        transform: scale(1.1);
 	}
 	100% {
-		transform: scale(1);
+		-webkit-transform: scale(1);
+		        transform: scale(1);
 	}
 }
 @-webkit-keyframes scaleUp {
 	0% {
-		transform: scale(0);
+		-webkit-transform: scale(0);
+		        transform: scale(0);
 	}
 	70% {
-		transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		        transform: scale(1.1);
 	}
 	100% {
-		transform: scale(1);
+		-webkit-transform: scale(1);
+		        transform: scale(1);
 	}
 }
 @-o-keyframes scaleUp {
 	0% {
-		transform: scale(0);
+		-webkit-transform: scale(0);
+		        transform: scale(0);
 	}
 	70% {
-		transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		        transform: scale(1.1);
 	}
 	100% {
-		transform: scale(1);
+		-webkit-transform: scale(1);
+		        transform: scale(1);
 	}
 }
 @keyframes scaleUp {
 	0% {
-		transform: scale(0);
+		-webkit-transform: scale(0);
+		        transform: scale(0);
 	}
 	70% {
-		transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		        transform: scale(1.1);
 	}
 	100% {
-		transform: scale(1);
+		-webkit-transform: scale(1);
+		        transform: scale(1);
 	}
 }
 @-moz-keyframes moveDown {
 	0% {
-		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		        transform: translateY(0px);
 	}
 	50% {
-		transform: translateY(10px);
+		-webkit-transform: translateY(10px);
+		        transform: translateY(10px);
 	}
 	100% {
-		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		        transform: translateY(0px);
 	}
 }
 @-webkit-keyframes moveDown {
 	0% {
-		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		        transform: translateY(0px);
 	}
 	50% {
-		transform: translateY(10px);
+		-webkit-transform: translateY(10px);
+		        transform: translateY(10px);
 	}
 	100% {
-		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		        transform: translateY(0px);
 	}
 }
 @-o-keyframes moveDown {
 	0% {
-		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		        transform: translateY(0px);
 	}
 	50% {
-		transform: translateY(10px);
+		-webkit-transform: translateY(10px);
+		        transform: translateY(10px);
 	}
 	100% {
-		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		        transform: translateY(0px);
 	}
 }
 @keyframes moveDown {
 	0% {
-		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		        transform: translateY(0px);
 	}
 	50% {
-		transform: translateY(10px);
+		-webkit-transform: translateY(10px);
+		        transform: translateY(10px);
 	}
 	100% {
-		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		        transform: translateY(0px);
 	}
 }
 @-moz-keyframes hide {
@@ -2005,7 +2037,8 @@ a {
 	position: absolute;
 	top: 345px;
 	right: 102px;
-	transform: scale(0);
+	-webkit-transform: scale(0);
+	        transform: scale(0);
 }
 .header__discount_animated {
 	animation: scaleUp 1s ease forwards;

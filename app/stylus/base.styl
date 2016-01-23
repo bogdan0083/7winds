@@ -283,21 +283,27 @@ webfont('Lato Semi Bold Italic', '../fonts/lato-semibolditalic-webfont', 600, it
 
 @keyframes scaleUp
   0%
+    -webkit-transform scale(0)
     transform scale(0)
   70%
+    -webkit-transform scale(1.1)
     transform scale(1.1)
   100%
+    -webkit-transform scale(1)
     transform scale(1)
     
 // KEYFRAMES FOR ARROW DOWN
 
 @keyframes moveDown
   0%
+    -webkit-transform translateY(0px)
     transform translateY(0px)
   
   50% 
+    -webkit-transform translateY(10px)
     transform translateY(10px)
   100%
+    -webkit-transform translateY(0px)
     transform translateY(0px)
 
 
