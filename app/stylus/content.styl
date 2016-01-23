@@ -15,7 +15,10 @@
 		opacity 0
 		rb700()
 		&_animated {
+			-webkit-animation appear 1s ease forwards
 			animation appear 1s ease forwards
+			
+			-webkit-animation-delay 0.5s
 			animation-delay 0.5s
 		}
 	}
@@ -40,10 +43,14 @@
 			transform translateX(-55%)
 		}
 		&_first_animated {
+			-webkit-animation hide 0.5s ease forwards
 			animation hide 0.5s ease forwards
 		}
 		&_second_animated {
+			-webkit-animation appear 0.5s ease forwards
 			animation appear 0.5s ease forwards
+			
+			-webkit-animation-delay 0.5s
 			animation-delay 0.5s
 		}
 	}
@@ -58,19 +65,33 @@
 		opacity 0
 		
 		&_animated_first {
+			-webkit-animation appear 0.5s ease forwards
 			animation appear 0.5s ease forwards
+			
+			-webkit-animation-delay 0.9s
 			animation-delay 0.9s
 		}
 		&_animated_second {
+			-webkit-animation appear 0.5s ease forwards
 			animation appear 0.5s ease forwards
+			
+			-webkit-animation-delay 1.4s
 			animation-delay 1.4s
 		}
 		&_animated_third {
+			
+			-webkit-animation appear 0.5s ease forwards
 			animation appear 0.5s ease forwards
+			
+			-webkit-animation-delay 1.9s
 			animation-delay 1.9s
 		}
 		&_animated_forth {
+			
+			-webkit-animation appear 0.5s ease forwards
 			animation appear 0.5s ease forwards
+			
+			-webkit-animation-delay 2.4s
 			animation-delay 2.4s
 		}
 		
@@ -256,12 +277,19 @@
 			opacity 0
 		}
 		&_animated::before {
+			-webkit-animation appear 1s ease forwards
 			animation appear 1s ease forwards
+			
+			-webkit-animation-delay 1s
 			animation-delay 1s
 		}
 		
 		&_animated::after {
+			
+			-webkit-animation appear 1s ease forwards
 			animation appear 1s ease forwards
+			
+			-webkit-animation-delay 0.4s
 			animation-delay 0.4s
 		}
 	}
@@ -292,7 +320,11 @@
 			opacity 0
 		}
 		&_animated::before {
+			
+			-webkit-animation appear 1s ease forwards
 			animation appear 1s ease forwards
+			
+			-webkit-animation-delay 1.4s
 			animation-delay 1.4s
 		}
 	}

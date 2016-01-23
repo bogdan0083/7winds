@@ -2041,8 +2041,10 @@ a {
 	        transform: scale(0);
 }
 .header__discount_animated {
-	animation: scaleUp 1s ease forwards;
-	animation-delay: 0.5s;
+	-webkit-animation: scaleUp 1s ease forwards;
+	        animation: scaleUp 1s ease forwards;
+	-webkit-animation-delay: 0.5s;
+	        animation-delay: 0.5s;
 }
 .header__form-wrap {
 	width: 1155px;
@@ -2056,7 +2058,8 @@ a {
 	opacity: 0;
 }
 .header__form-wrap_animated {
-	animation: fadeInUp 1s ease forwards;
+	-webkit-animation: fadeInUp 1s ease forwards;
+	        animation: fadeInUp 1s ease forwards;
 }
 .header__form {
 	margin-left: 55px;
@@ -2183,8 +2186,10 @@ a {
 	font-weight: 700;
 }
 .features__heading_animated {
-	animation: appear 1s ease forwards;
-	animation-delay: 0.5s;
+	-webkit-animation: appear 1s ease forwards;
+	        animation: appear 1s ease forwards;
+	-webkit-animation-delay: 0.5s;
+	        animation-delay: 0.5s;
 }
 .features__group {
 	position: relative;
@@ -2213,11 +2218,14 @@ a {
 	        transform: translateX(-55%);
 }
 .features__image_first_animated {
-	animation: hide 0.5s ease forwards;
+	-webkit-animation: hide 0.5s ease forwards;
+	        animation: hide 0.5s ease forwards;
 }
 .features__image_second_animated {
-	animation: appear 0.5s ease forwards;
-	animation-delay: 0.5s;
+	-webkit-animation: appear 0.5s ease forwards;
+	        animation: appear 0.5s ease forwards;
+	-webkit-animation-delay: 0.5s;
+	        animation-delay: 0.5s;
 }
 .features__left {
 	float: left;
@@ -2230,20 +2238,28 @@ a {
 	opacity: 0;
 }
 .features__feature_animated_first {
-	animation: appear 0.5s ease forwards;
-	animation-delay: 0.9s;
+	-webkit-animation: appear 0.5s ease forwards;
+	        animation: appear 0.5s ease forwards;
+	-webkit-animation-delay: 0.9s;
+	        animation-delay: 0.9s;
 }
 .features__feature_animated_second {
-	animation: appear 0.5s ease forwards;
-	animation-delay: 1.4s;
+	-webkit-animation: appear 0.5s ease forwards;
+	        animation: appear 0.5s ease forwards;
+	-webkit-animation-delay: 1.4s;
+	        animation-delay: 1.4s;
 }
 .features__feature_animated_third {
-	animation: appear 0.5s ease forwards;
-	animation-delay: 1.9s;
+	-webkit-animation: appear 0.5s ease forwards;
+	        animation: appear 0.5s ease forwards;
+	-webkit-animation-delay: 1.9s;
+	        animation-delay: 1.9s;
 }
 .features__feature_animated_forth {
-	animation: appear 0.5s ease forwards;
-	animation-delay: 2.4s;
+	-webkit-animation: appear 0.5s ease forwards;
+	        animation: appear 0.5s ease forwards;
+	-webkit-animation-delay: 2.4s;
+	        animation-delay: 2.4s;
 }
 .features__feature-heading {
 	font-size: 18px;
@@ -2447,12 +2463,16 @@ a {
 	opacity: 0;
 }
 .process__in_animated::before {
-	animation: appear 1s ease forwards;
-	animation-delay: 1s;
+	-webkit-animation: appear 1s ease forwards;
+	        animation: appear 1s ease forwards;
+	-webkit-animation-delay: 1s;
+	        animation-delay: 1s;
 }
 .process__in_animated::after {
-	animation: appear 1s ease forwards;
-	animation-delay: 0.4s;
+	-webkit-animation: appear 1s ease forwards;
+	        animation: appear 1s ease forwards;
+	-webkit-animation-delay: 0.4s;
+	        animation-delay: 0.4s;
 }
 .process__heading {
 	text-align: center;
@@ -2490,8 +2510,10 @@ a {
 	opacity: 0;
 }
 .process__steps_animated::before {
-	animation: appear 1s ease forwards;
-	animation-delay: 1.4s;
+	-webkit-animation: appear 1s ease forwards;
+	        animation: appear 1s ease forwards;
+	-webkit-animation-delay: 1.4s;
+	        animation-delay: 1.4s;
 }
 .process__step {
 	font-family: "Roboto", sans-serif;
