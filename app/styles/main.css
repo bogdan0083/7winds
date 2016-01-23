@@ -2166,7 +2166,8 @@ a {
 .features__image {
 	position: absolute;
 	left: 50%;
-	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
 	top: -32px;
 }
 .features__image_first {
@@ -2175,7 +2176,8 @@ a {
 }
 .features__image_second {
 	opacity: 0;
-	transform: translateX(-55%);
+	-webkit-transform: translateX(-55%);
+	        transform: translateX(-55%);
 }
 .features__image_first_animated {
 	animation: hide 0.5s ease forwards;
@@ -2640,18 +2642,21 @@ a {
 	display: block;
 }
 .testimonials__control:nth-child(1) {
-	transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	        transform: rotate(-10deg);
 	top: 50px;
 	left: -10px;
 }
 .testimonials__control:nth-child(2) {
-	transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	        transform: rotate(5deg);
 	top: 260px;
 	left: 10px;
 	z-index: 1;
 }
 .testimonials__control:nth-child(3) {
-	transform: rotate(-4deg);
+	-webkit-transform: rotate(-4deg);
+	        transform: rotate(-4deg);
 	top: 480px;
 	left: -10px;
 }
@@ -2777,7 +2782,7 @@ a {
 	text-align: center;
 	background-color: rgba(255,255,255,0.8);
 	top: 130px;
-	left: 50%;
+	left: 30%;
 	margin-left: -251px;
 }
 .contact__logo {

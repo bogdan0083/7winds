@@ -19,6 +19,8 @@ $(document).ready(function() {
         }
     });
 
+    // wow.js - эффект появления
+
     var wow = new WOW({
         boxClass: 'wow', // animated element css class (default is wow)
         animateClass: '', // animation css class (default is animated)
@@ -50,6 +52,8 @@ $(document).ready(function() {
     });
     wow.init();
 
+    // инициализация слайдера
+
     $('.testimonials__slider').slick({
         dots: false,
         autoplay: false,
@@ -73,6 +77,8 @@ $(document).ready(function() {
         $('.testimonials__slider').slick('slickGoTo', index);
     });
 
+    // анимация при книке на меню
+
     $('.header__topline').on('click', '.header__nav-item a', function(e) {
         e.preventDefault();
         var id = $(e.target).attr('href');
@@ -90,16 +96,22 @@ $(document).ready(function() {
         midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
     });
 
+    // выбор даты
+
     var picker = new Pikaday({ 
         field: document.getElementById('datepicker'),
         format: 'DD.MM.YYYY'
     });
+
+    // кастомный селект
 
     $('#mail').select2({
         placeholder: 'Ваш email',
         minimumResultsForSearch: Infinity
     });
 
+    // скрипт для поля типа "файл"
+    
     ( function( $, window, document, undefined )
 {
     $( '.inputfile' ).each( function()

@@ -23,12 +23,14 @@
 
 <body>
     <div class="main main_form">
+    
+        <!-- FORM COMPONENT -->
         <form class="form form_custom form_w960">
             <div class="form_custom__wrapper-top">
-                <label for="" class="label">Выберите дату:
+                <label class="label">Выберите дату:
                     <input type="text" class="field field_calendar" name="date" id="datepicker" placeholder="15.08.2016">
                 </label>
-                <select name="" id="mail" class="select" style="width: 180px" placeholder="Ваш e-mail">
+                <select name="mail" id="mail" class="select" style="width: 180px" data-placeholder="Ваш e-mail">
                     <option></option>
                     <option value="second">Ваш e-mail</option>
                     <option value="second">Ваш e-mail</option>
@@ -40,9 +42,9 @@
                     <label for="file" class="button button_red">Обзор...</label>
                 </div>
             </div>
-            <label for="" class="label label_name">Введите ваше имя<input name="name" type="text" class="field"></label>
+            <label class="label label_name">Введите ваше имя<input name="name" type="text" class="field"></label>
             <div class="form_custom__wrapper-bottom">
-                <textarea name="text" id="" class="textarea" placeholder="Напишите ваши пожелания и желаемый бюджет и мы перезвоним с готовыми предложениями!"></textarea>
+                <textarea name="text" class="textarea" placeholder="Напишите ваши пожелания и желаемый бюджет и мы перезвоним с готовыми предложениями!"></textarea>
                 <div class="form_custom__wrapper-right">
                     <div class="form__agreement">
                         <input type="checkbox" name="agreement" class="form__checkbox form__checkbox_circle" id="agreement">

@@ -27,6 +27,7 @@
 	&__image {
 		position absolute
 		left 50%
+		-webkit-transform translateX(-50%)
 		transform translateX(-50%)
 		top -32px
 		&_first {
@@ -35,6 +36,7 @@
 		}
 		&_second {
 			opacity 0
+			-webkit-transform translateX(-55%)
 			transform translateX(-55%)
 		}
 		&_first_animated {
@@ -466,17 +468,20 @@
 			display block
 		}
 		&:nth-child(1) {
+			-webkit-transform rotate(-10deg)
 			transform rotate(-10deg)
 			top 50px
 			left -10px
 		}
 		&:nth-child(2) {
+			-webkit-transform rotate(5deg)
 			transform rotate(5deg)
 			top 260px
 			left 10px
 			z-index 1
 		}
 		&:nth-child(3) {
+			-webkit-transform rotate(-4deg)
 			transform rotate(-4deg)
 			top 480px
 			left -10px
@@ -603,7 +608,7 @@
 		text-align center
 		background-color rgba(white, 0.8)
 		top 130px
-		left 50%
+		left 30%
 		margin-left -(@width / 2)
 		
 	}
