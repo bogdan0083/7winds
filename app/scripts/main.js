@@ -56,7 +56,8 @@ $(document).ready(function() {
         infinite: true,
         arrows: false,
         fade: true,
-        cssEase: 'ease'
+        cssEase: 'ease',
+        initialSlide: 1
     });
 
     // изменять затемнение при клике
