@@ -5,7 +5,6 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,400italic|Roboto+Condensed:400,700|Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
-   
     <meta charset="utf-8">
     <title>Главная</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -17,11 +16,11 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"> </script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-
 </head>
 
 <body>
@@ -52,26 +51,26 @@
                     <h1 class="header__mega-heading">Лучшие туры в Доминикану - здесь</h1>
                     <div class="header__discount"></div>
                     <div class="header__form-wrap">
-                        <form action="" class="header__form form">
-                            <label class="form__label">Откуда:
-                                <input type="text" name="from" class="form__field" placeholder="Москва">
+                        <form action="" class="header__form">
+                            <label class="header__label">Откуда:
+                                <input type="text" name="from" class="header__field" placeholder="Москва">
                             </label>
-                            <label class="form__label">Куда:
-                                <input type="text" name="to" class="form__field" placeholder="Доминикана">
+                            <label class="header__label">Куда:
+                                <input type="text" name="to" class="header__field" placeholder="Доминикана">
                             </label>
-                            <label class="form__label">Дата вылета:
-                                <input type="text" name="data" class="form__field" placeholder="">
+                            <label class="header__label">Дата вылета:
+                                <input type="text" name="data" class="header__field" placeholder="">
                             </label>
-                            <label class="form__label">Ночей
-                                <input type="text" name="nights" class="form__field" placeholder="14">
+                            <label class="header__label">Ночей
+                                <input type="text" name="nights" class="header__field" placeholder="14">
                             </label>
-                            <label class="form__label">Взрослых:
-                                <input type="text" name="adults" class="form__field" placeholder="2">
+                            <label class="header__label">Взрослых:
+                                <input type="text" name="adults" class="header__field" placeholder="2">
                             </label>
-                            <label class="form__label">Детей:
-                                <input type="text" name="children" class="form__field" placeholder="0">
+                            <label class="header__label">Детей:
+                                <input type="text" name="children" class="header__field" placeholder="0">
                             </label>
-                            <button type="submit" class="form__submit button button_red">Оставить заявку</button>
+                            <button type="submit" class="header__submit button button_red">Оставить заявку</button>
                         </form>
                     </div>
                 </section>
@@ -119,7 +118,7 @@
             <section class="apply">
                 <div class="apply__in">
                     <h2 class="apply__heading">ОСТАВЬТЕ ЗАЯВКУ И МЫ НАЙДЕМ ТО, ЧТО ВЫ ИЩеТЕ!</h2>
-                    <div class="apply__form form">
+                    <div class="apply__form">
                         <input type="text" class="form__field" name="name" placeholder="Ваше имя">
                         <input type="text" class="form__field" name="mail" placeholder="Ваш e-mail">
                         <input type="text" class="form__field" name="phone" placeholder="Ваш номер телефона">
@@ -257,34 +256,36 @@
                 <p class="footer__copyright">2015 © Туристическая компания “Название” - Горячие туры в Турцию, Египет, Таиланд, ОАЭ, Испанию, Грецию, Марокко, Вьетнам, Чехию, Андорру, Доминикану, Мексику, Болгарию, Россию</p>
             </div>
         </footer>
-        <div id="popup" class="popup mfp-hide"><p>Попап окно</p></div>
+        <div id="popup" class="popup mfp-hide">
+            <p>Попап окно</p>
+        </div>
     </div>
     <script type="text/javascript">
-    ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [55.82130053, 37.50882614],
-            zoom: 17
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Собственный значок метки',
-            balloonContent: 'Это красивая метка'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'images/myIcon.gif',
-            // Размеры метки.
-            iconImageSize: [30, 42],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-3, -42]
-        });
+    ymaps.ready(function() {
+        var myMap = new ymaps.Map('map', {
+                center: [55.82130053, 37.50882614],
+                zoom: 17
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                hintContent: 'Собственный значок метки',
+                balloonContent: 'Это красивая метка'
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: 'images/myIcon.gif',
+                // Размеры метки.
+                iconImageSize: [30, 42],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-3, -42]
+            });
 
-    myMap.geoObjects.add(myPlacemark);
-});
+        myMap.geoObjects.add(myPlacemark);
+    });
     </script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -292,12 +293,12 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
     <script src="scripts/slick.min.js"></script>
     <script src="scripts/wow.min.js"></script>
     <script src="scripts/jquery.magnific-popup.min.js"></script>
+    <script src="scripts/pikaday.js"></script>
+    <script src="scripts/main.js"></script>
     <!-- endbuild -->
-
 </body>
 
 </html>

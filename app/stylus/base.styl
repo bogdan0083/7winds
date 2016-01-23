@@ -14,6 +14,9 @@ body
   min-width 1200px
   margin 0 auto
   clearfix()
+  &_form
+    background url('../images/form-bg.jpg') no-repeat center / cover
+    min-height 680px
 
 a
   color black
@@ -25,7 +28,7 @@ webfont('Lato Medium Italic', '../fonts/lato-mediumitalic-webfont', 500, italic)
 webfont('Lato Semi Bold Italic', '../fonts/lato-semibolditalic-webfont', 600, italic)
 
 
-// POPUP
+/*!! POPUP */
 
 .popup {
   position: relative;
@@ -35,6 +38,7 @@ webfont('Lato Semi Bold Italic', '../fonts/lato-semibolditalic-webfont', 600, it
   max-width: 500px;
   margin: 20px auto;
 } 
+
 // button
 
 .button {
@@ -81,66 +85,189 @@ webfont('Lato Semi Bold Italic', '../fonts/lato-semibolditalic-webfont', 600, it
   }
 }
 
-// FORM
+// COMPONENT: FORM
 
 .form {
+  background-color rgba(255, 255, 255, 0.2)
+  background-image linear-gradient(to top, rgba(0, 0, 0, 0.01) 0%, rgba(255, 255, 255, 0.01) 100%)
+  border-radius 5px
+  box-shadow 0 1px 2.9px 0.1px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(255, 255, 255, 0.7)
+  padding 70px
+  margin 22px auto
+  input::-webkit-input-placeholder { color: #616161; }
+  input::-moz-placeholder { color: #616161; }
+  input:-ms-input-placeholder { color: #616161; } 
+  textarea::-webkit-input-placeholder { color: #616161; }
+  textarea::-moz-placeholder { color: #616161; }
+  textarea:-ms-input-placeholder { color: #616161; } 
+  &_w960 {
+    width 960px
+  }
   
-  &__label {
-    color #242424
-    vertical-align top
-    rbc700()
-    font-size 16px
+  &__file-wrap {
+    padding-left 15px
+    padding-right 10px
+    border-radius 6px
+    width 340px
+    border 0
+    border 0.2px solid #959595
+    vertical-align bottom
+    border-radius 5px
+    box-shadow inset -0.7px 0.7px 0 rgba(0, 0, 0, 0.35)
+    height 46px
     display inline-block
-    &:nth-child(1) {
-      width 180px
-      margin-right 2px
-    }
-    &:nth-child(2) {
-      width 178px
-      margin-right 18px
-    }
-    &:nth-child(3) {
-      width 172px
-    }
-    &:nth-child(4) {
-      width 55px
+    font-family Arial, sans-serif
+    clearfix()
+    font-size 14px
+    background-color white
+  }
+  
+  &_custom {
+    .label:nth-child(1) {
       margin-right 20px
-      .form__field {
-        text-align center
-      }
     }
-    &:nth-child(5) {
-      width 90px
-      .form__field {
-        text-align center
-      }
+    
+    .label_name{
+      margin-top 30px
     }
-    &:nth-child(6) {
-      width 55px
-      .form__field {
-        text-align center
-      }
+    
+    &__wrapper-bottom {
+      margin-top 170px
+      clearfix()
+    }
+    
+    textarea {
+      float left
+    }
+    &__wrapper-right {
+      float right
+      margin-right 40px
     }
   }
-  &__field {
-    margin-top 3px
+  
+  &__agreement {
+    label {
+      font-size 14px
+      color #242424
+      position relative
+      padding-left 40px
+    }
+  }
+  &__checkbox {
+    display none
+  }
+  &__checkbox + label::before {
+    content ''
+    left 0
+    cursor pointer
+    position absolute
+    top 50%
+    left 10px
+    sprite($checkbox_square)
+    margin-top -(@width / 2)
+  }
+  &__checkbox:checked + label::before {
+    content ''
+    sprite($checkbox_square_checked)
+  }
+  &__checkbox_circle + label::after {
+    content ''
+    left 0
+    cursor pointer
+    position absolute
+    top -80%
+    left 10px
+    sprite($checkbox_circle)
+    margin-top -(@width / 2)
+  }
+  &__checkbox_circle:checked + label::after {
+    content ''
+    sprite($checkbox_circle_checked)
+  }
+  
+  &__submit {
+    float left
+    margin-top 25px
+    margin-left 15px
+  }
+}
+
+.label {
+  color #616161
+  font-size 14px
+  text-indent 5px
+  margin-left 12px
+  display inline-block
+}
+.field {
     padding-left 10px
     padding-right 10px
     border-radius 6px
-    width 48px
-    width 100%
+    width 180px
     border 0
-    box-shadow inset 0 0 3px 1px rgba(#e7e7e7, 100%)
-    height 48px
+    border 0.2px solid #959595
+    border-radius 5px
+    box-shadow inset -0.7px 0.7px 0 rgba(0, 0, 0, 0.35)
+    height 46px
     display block
-    rb500()
-  }
-  &__submit {
-    margin-left 25px
-    vertical-align bottom
-  }
-  &__textarea {
-  }
+    font-family Arial, sans-serif
+    font-size 14px
+    background-color white
+    margin-top 8px
+    &_calendar {
+      background white url('../images/calendar.png') no-repeat 150px center
+      padding-right 35px
+    }
+}
+
+.file-wrap__filename {
+      float left
+      height 46px
+      line-height 46px
+      max-width 190px
+      color #616161   
+}
+
+.inputfile + label {
+    cursor: pointer
+    width 112px
+    height 35px
+    padding 0
+    line-height 35px
+    text-align center
+    float right
+    font-size 11px
+    margin-top 5px
+}
+
+
+.no-js .inputfile + label {
+    display: none;
+}
+
+.js .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.textarea {
+    padding 15px
+    border-radius 6px
+    width 565px
+    border 0
+    border 0.2px solid #959595
+    border-radius 5px
+    box-shadow inset -0.7px 0.7px 0 rgba(0, 0, 0, 0.35)
+    height 78px
+    display block
+    font-family Arial, sans-serif
+    font-size 14px
+    background-color white
+    margin-top 8px
 }
 
 // KEYFRAMES FOR DISCOUNT BLOCK

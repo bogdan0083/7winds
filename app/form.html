@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,400italic|Roboto+Condensed:400,700|Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <meta charset="utf-8">
+    <title>Главная</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body>
+    <div class="main main_form">
+        <form class="form form_custom form_w960">
+            <div class="form_custom__wrapper-top">
+                <label for="" class="label">Выберите дату:
+                    <input type="text" class="field field_calendar" name="date" id="datepicker" placeholder="15.08.2016">
+                </label>
+                <select name="" id="mail" class="select" style="width: 180px" placeholder="Ваш e-mail">
+                    <option></option>
+                    <option value="second">Ваш e-mail</option>
+                    <option value="second">Ваш e-mail</option>
+                    <option value="second">Ваш e-mail</option>
+                </select>
+                <div class="form__file-wrap">
+                    <div class="file-wrap__filename">Файл не выбран</div>
+                    <input type="file" name="file" id="file" class="inputfile" />
+                    <label for="file" class="button button_red">Обзор...</label>
+                </div>
+            </div>
+            <label for="" class="label label_name">Введите ваше имя<input name="name" type="text" class="field"></label>
+            <div class="form_custom__wrapper-bottom">
+                <textarea name="text" id="" class="textarea" placeholder="Напишите ваши пожелания и желаемый бюджет и мы перезвоним с готовыми предложениями!"></textarea>
+                <div class="form_custom__wrapper-right">
+                    <div class="form__agreement">
+                        <input type="checkbox" name="agreement" class="form__checkbox form__checkbox_circle" id="agreement">
+                        <label for="agreement">Ознакомлен и согласен</label>
+                    </div>
+                    <button class="form__submit button button_red" type="submit"> Отправить</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/slick.min.js"></script>
+    <script src="scripts/wow.min.js"></script>
+    <script src="scripts/jquery.magnific-popup.min.js"></script>
+    <script src="scripts/moment.min.js"></script>
+    <script src="scripts/pikaday.js"></script>
+    <script src="scripts/select2.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
